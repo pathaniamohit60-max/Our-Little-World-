@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffe4ec, #fff5f8);
+    color: #333;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px 20px;
+}
+
+h1,
+h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    color: #ff4f87;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.enter-btn {
+    margin-top: 40px;
+    text-decoration: none;
+    background: #ff4f87;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.enter-btn:hover {
+    transform: scale(1.05);
+}
+
+.journey,
+.gallery-section,
+.reasons,
+.music-section,
+.secret-section,
+.letter-section {
+    text-align: center;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #ff4f87;
+    margin-bottom: 50px;
+}
+
+.counter-box,
+.reason-box,
+.music-box,
+.secret-box,
+.letter-box {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.counter-box h3 {
+    font-size: 5rem;
+    color: #ff4f87;
+}
+
+.counter-box p {
+    font-size: 2rem;
+}
+
+.counter-box span {
+    display: block;
+    margin-top: 20px;
+    color: #666;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 20px;
+    font-style: italic;
+}
+
+.reason-box p {
+    font-size: 1.5rem;
+    min-height: 80px;
+}
+
+.reason-box button {
+    margin-top: 25px;
+    padding: 15px 30px;
+    border: none;
+    background: #ff4f87;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.moon {
+    font-size: 5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.letter-box {
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+
+
+.hearts::after {
+    top: 50%;
+    animation-duration: 25s;
+}
+
+@keyframes float {
+
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(-120vh);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .counter-box h3 {
+        font-size: 3.5rem;
+    }
+}
