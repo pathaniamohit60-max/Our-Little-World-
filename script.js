@@ -1,3 +1,26 @@
+function checkPassword() {
+
+    const password = document
+        .getElementById("passwordInput")
+        .value;
+
+    if(password === "MOPA") {
+
+        document.getElementById(
+            "passwordScreen"
+        ).style.display = "none";
+
+        document.getElementById(
+            "websiteContent"
+        ).style.display = "block";
+
+    }
+
+    else {
+
+        alert("Wrong Password ❤️");
+    }
+}
 const startDate = new Date("2024-12-04");
 
 function updateDaysTogether() {
