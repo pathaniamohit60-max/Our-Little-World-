@@ -14,7 +14,30 @@
 </head>
 
 <body>
+<script>
 
+let password = prompt("Enter the secret password ❤️");
+
+if(password !== "Sanchit") {
+
+    document.body.innerHTML = `
+        <div style="
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family:sans-serif;
+            font-size:2rem;
+            background:#ffe4ec;
+            color:#ff4f87;
+        ">
+            Wrong Password ❤️
+        </div>
+    `;
+
+}
+
+</script>
     <div class="hearts"></div>
 
     <!-- Hero Section -->
