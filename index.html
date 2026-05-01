@@ -12,26 +12,67 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+<audio id="bgMusic" loop>
 
+    <source src="song.mp3" type="audio/mpeg">
+
+</audio>
+<script>
+
+document.addEventListener("click", function () {
+
+    const music = document.getElementById("bgMusic");
+
+    music.play();
+
+}, { once: true });
+
+</script>
 <body>
-<div id="passwordScreen">
+<script>
 
-    <div class="password-box">
+const correctPassword = "7412";
 
-        <h1>Our Little World ❤️</h1>
+const enteredPassword = prompt(
+    "Enter the secret password ❤️"
+);
 
-        <p>Enter Secret Password</p>
+if (enteredPassword !== correctPassword) {
 
-        <input type="password" id="passwordInput" placeholder="Password">
+    document.body.innerHTML = `
+    
+        <div style="
+        
+            height:100vh;
+            
+            display:flex;
+            
+            justify-content:center;
+            
+            align-items:center;
+            
+            background:linear-gradient(to bottom, #ffe4ec, #fff5f8);
+            
+            font-family:Poppins, sans-serif;
+            
+            font-size:2rem;
+            
+            color:#ff4f87;
+            
+            text-align:center;
+        ">
+        
+            Wrong Password ❤️
+        
+        </div>
+        
+    `;
 
-        <button onclick="checkPassword()">
-            Enter ❤️
-        </button>
+    throw new Error("Wrong Password");
+}
 
-    </div>
-
+</script>
 </div>
-<div id="websiteContent" style="display:none;"></div>
     <div class="hearts"></div>
 
     <!-- Hero Section -->
@@ -134,27 +175,6 @@
     </section>
 
 
-    <!-- Music -->
-    <section class="music-section">
-
-        <h2>Songs That Feel Like You 🎵</h2>
-
-        <div class="music-box">
-
-            <iframe
-                style="border-radius:20px"
-                src="https://open.spotify.com/embed/track/3be9ACTxtcL6Zm4vJRUiPG?utm_source=generator"
-                width="100%"
-                height="152"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-            </iframe>
-
-        </div>
-
-    </section>
 
 
     <!-- Secret -->
@@ -214,7 +234,6 @@
         Made with endless love ❤️
     </footer>
 
-</div>
     <script src="script.js"></script>
 
 </body>
