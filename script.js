@@ -1,5 +1,5 @@
 
-const startDate = new Date("2024-12-04");
+const startDate = new Date("2022-10-04");
 
 function updateDaysTogether() {
 
